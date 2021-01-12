@@ -1,3 +1,4 @@
+
 const express = require("express");
 const bodyParser = require("body-parser");
 const path = require("path");
@@ -15,7 +16,7 @@ const saltRounds = 10;
 
 const app = express();
 app.use(express.static("public"));
-app.use(express.json());
+app.use(express.json());  
 
 app.post("/signup", (req, res) => {
     const {userName, email, password} = req.body;
